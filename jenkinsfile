@@ -1,5 +1,9 @@
 pipeline {
-  agent {terraform}
+  agent {
+    node {
+      label 'terraform'
+    }
+  }
   stages {
     stage('checkout') {
 	  steps {
